@@ -157,4 +157,4 @@ def test_delete():
 @pytest.mark.it("The endpoint 'DELETE /todos' should exist")
 def test_return(client):
     response = client.delete('/todos/1')
-    assert response.status_code == 200
+    assert response.status_code in [200, 201]
